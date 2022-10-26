@@ -1,0 +1,212 @@
+*, *::before, *::after{
+  border-style: border-box;
+}
+header{
+  padding: 1em;
+  text-transform: uppercase;
+  width: 100%;
+  border-bottom: 2px solid #CDFCF6;
+}
+
+footer{
+  text-align: center;
+  font-weight: 100;
+  background-color: #CDFCF6;
+  width: 100%;
+  padding: 0.75em;
+}
+
+body{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 900;
+}
+
+p{
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+li{
+  list-style: none;
+}
+
+a { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; color: #CDFCF6; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
+
+.nav__item{
+  display: flex;
+  gap: 20px;
+}
+
+.nav__link{
+
+}
+
+.container{
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1200px;
+  padding: 0 5em;
+  line-height: 3em;
+}
+
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #23424A;
+  font-weight: 900;
+  background-color: #7C83FD;
+  padding: .75em 2em;
+  border-radius: 100px;
+}
+
+
+
+.sign_up_btn{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 900;
+  background-color: #CDFCF6;
+  padding: .75em 2em;
+  border-radius: 100px;
+}
+
+.signup{
+  margin: 2em auto;
+  display: block;
+  padding: 1.5em 5em;
+}
+
+.signup_title{
+  text-align: center;
+  }
+
+.hero_banner{
+  padding: 5em 0;
+  background-color: #CDFCF6 ;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  flex-direction: row;
+}
+
+.hero_title{
+  width: 50%;
+  line-height: 85px;
+}
+
+.hero_image{
+  max-width: 900px;
+  width: 80%;
+  transform: rotate(-10deg);
+}
+
+.info{
+  padding: 7em 0;
+  width:80%
+  border: 3px solid blue;
+  background-image: -webkit-linear-gradient(65deg, #FFFFFF  50%, #CDFCF6  50%);
+}
+
+.body__style{
+  padding: 7em 0;
+  display: flex;
+  width:80%
+  border: 3px solid blue;
+  background-image: -webkit-linear-gradient(65deg, white  50%, #CDFCF6  50%);
+  height: 100vh;
+}
+
+.info__text{
+  width: 80%;
+}
+
+.feature{
+  padding: 7em 0;
+}
+
+.feature_list{
+  background-color: #CDFCF6;
+  text-align: center;
+  padding: 0 2em;
+}
+
+.robin_img{
+  padding-top: 2em;
+}
+
+.reviews img{
+  max-width:300px;
+  border-radius: 50%;
+}
+
+.reviews h2{
+  text-align: center;
+}
+
+.info__img{
+max-width: 500px;
+}
+
+.love_birds_img{
+  max-width: 400px;
+}
+
+.input{
+  display: block;
+  margin: 2em 0;
+  padding: 0.5em 4em;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.login_body{
+  background-image: -webkit-linear-gradient(0deg, white  50%, #CDFCF6  50%);
+  height: 100vh;
+  text-align: center;
+}
+
+.sign_up{
+text-align: center;
+position: relative;
+left: 100px;
+}
+
+.reviews{
+  background-image: -webkit-linear-gradient(65deg, #CDFCF6 50%, #FFFFFF  50%);
+  padding: 7em 0;
+
+}
+
+.pricing{
+  padding: 2em 0;
+  text-align: center;
+  background-image: -webkit-linear-gradient(65deg, #CDFCF6 50%, #FFFFFF  50%);
+
+}
+
+.pricing  p{
+  font-weight: 800;
+  font-size: 1.25rem;
+}

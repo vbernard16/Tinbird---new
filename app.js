@@ -1,7 +1,9 @@
+require('dotenv').config()
 const express = require('express');
 const ejs = require('ejs');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const encrypt = require('mongoose-encryption');
 
 const app = express();
 
@@ -24,6 +26,8 @@ const userdataSchema = new mongoose.Schema({
   }
 });
 
+userdataSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ['password']  });
+
 const User_Credentials = mongoose.model('user_credential', userdataSchema);
 
 app.get("/", function(req, res){
@@ -36,6 +40,19 @@ app.get("/about", function(req, res){
 
 app.get("/login", function(req, res){
   res.render("login")
+});
+
+app.post("/signup", function(req, res){
+  const new_user = new User_Credentials({
+    username:  req.body.signup_username,
+    email:  req.body.signup_email,
+    password: req.body.signup_password
+  })
+  new_user.save(function(err){
+    if (!err){
+      res.send("success")
+    }
+  });
 });
 
 app.post("/login", function(req, res){
@@ -69,18 +86,7 @@ app.get("/birdsnest", function(req, res){
   res.render("bird_nest")
 });
 
-app.post("/signup", function(req, res){
-  const new_user = new User_Credentials({
-    username:  req.body.signup_username,
-    email:  req.body.signup_email,
-    password: req.body.signup_password
-  })
-  new_user.save(function(err){
-    if (!err){
-      res.send("success")
-    }
-  });
-});
+
 
 
 
